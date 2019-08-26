@@ -1,0 +1,140 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "print.scss";
+@import "compass/reset";
+/* Example CSS file */
+
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $base-color;
+}
+
+.monospace {
+  font-family: Monaco, monospace;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: black;
+}
+
+.superscript { top: -0.5em; }
+.subscript { bottom: -0.25em; }
+
+.block-margins {
+  margin: 0.5rem 0 1rem;
+}
+
+.blockquote {
+  border-left: 3px solid silver;
+  color: DeepPink;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+.large-blockquote {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin: 2rem 0;
+}
+.container {
+	margin:15%;
+}
+.card {
+	
+	width:35%;
+	box-shadow:0px 0px 5px grey;
+	transition: box-shadow 2s;
+	img {
+		width:100%;
+	}
+}
+.card-img {
+	position:relative;
+	width:100%;
+	height: 230px;
+	transition: height 1s;
+	overflow:hidden;
+	img {
+		
+		transition: all 1s;
+	}
+}
+.card-img-footer {
+	display:inline-block;
+	position:absolute;
+	font-size: 22px;
+	text-transform:uppercase;
+	background-color:#E74C3C;
+	bottom: -5px;
+  left: 0px;
+	padding:10px;
+	
+	color:white;
+}
+.card-img-date {
+	display:inline-block;
+	position:absolute;
+	font-size: 15px;
+	
+	background-color:#E74C3C;
+	top: 16px;
+	right: 16px;
+	border-radius:50%;
+	padding:5px;
+	padding-top: 8px;
+	height:50px;
+	width:50px;
+	text-align:center;
+	color:white;
+}
+.card-content {
+	padding:25px;
+	.card-content-title {
+		font-size:25px;
+		text-transform:uppercase;
+		color:black;
+	}
+	.card-content-subtitle {
+		font-size:20px;
+		color:#CE6D81;
+		padding-bottom:30px;
+	}
+	.card-content-info {
+		opacity:0;
+		height:1px;
+		transition: all 1s;
+		overflow:hidden;
+	}
+}
+.card-footer {
+	padding:25px;
+	padding-top:10px;
+	span {
+		margin-right:20px;
+	}
+}
+.card:hover {
+	box-shadow:0px 0px 20px grey;
+	.card-img img {
+		transform:scale(1.2);
+		-webkit-filter: blur(5px); 
+		filter: blur(2px);
+		opacity:0.5;	
+	}
+	.card-img {
+		height:150px;
+	}
+	.card-content-info {
+		height:80px;
+		opacity:1;
+	}
+} 
